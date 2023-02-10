@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iLcwzrljT/U/r9pnypshescykH3FkusY5GlTY8BiUJalvz//jD9VTg8WaI7+9HoPkchAh/7VvyYSn2269WKt4A==",
+  "success": true,
+  "projectFilePath": "/home/rickt/Documents/GithubProjects/lfsr/lfsr.csproj",
+  "expectedPackageFiles": [
+    "/home/rickt/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.2/microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
