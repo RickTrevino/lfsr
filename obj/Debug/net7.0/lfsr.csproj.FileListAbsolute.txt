@@ -1,0 +1,15 @@
+/home/rickt/Documents/GithubProjects/lfsr/bin/Debug/net7.0/lfsr
+/home/rickt/Documents/GithubProjects/lfsr/bin/Debug/net7.0/lfsr.deps.json
+/home/rickt/Documents/GithubProjects/lfsr/bin/Debug/net7.0/lfsr.runtimeconfig.json
+/home/rickt/Documents/GithubProjects/lfsr/bin/Debug/net7.0/lfsr.dll
+/home/rickt/Documents/GithubProjects/lfsr/bin/Debug/net7.0/lfsr.pdb
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/lfsr.csproj.AssemblyReference.cache
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/lfsr.GeneratedMSBuildEditorConfig.editorconfig
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/lfsr.AssemblyInfoInputs.cache
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/lfsr.AssemblyInfo.cs
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/lfsr.csproj.CoreCompileInputs.cache
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/lfsr.dll
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/refint/lfsr.dll
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/lfsr.pdb
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/lfsr.genruntimeconfig.cache
+/home/rickt/Documents/GithubProjects/lfsr/obj/Debug/net7.0/ref/lfsr.dll
