@@ -25,7 +25,7 @@ namespace lfsr
 
         static byte[] Crypt(byte[] data, uint initialValue)
         {
-            const uint feedbackValue = 0x87654321;
+            const uint feedbackValue = 0x87654321; //Given const from instructions.
             bool inputIsHex = IsHex(data);
 
             data = FormatAndPrintData(data, inputIsHex); //Interpret hex input strings and convert to a byte array. Print input.
