@@ -1,13 +1,16 @@
-public class Test
-{
-    public string a;
-    public string hex;
-    public uint initialValue;
+using System.Text;
 
-    public Test()
+namespace lfsr
+{
+    public class Test
     {
-        a = "apple";
-        hex = "\xCD\x01\xEF\xD7\x30";
-        initialValue = 0x12345678;
+        public uint initialValue;
+        public byte[] bytes;
+
+        public Test(string stringValue, uint initialValue)
+        {
+            bytes = Encoding.ASCII.GetBytes(stringValue);
+            this.initialValue = initialValue;
+        }
     }
 }
