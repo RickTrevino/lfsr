@@ -4,26 +4,9 @@ using System.Text;
 
 namespace lfsr
 {
-    public static class Program
+    public class LfsrProgram
     {
-        public static void Main()
-        {
-            List<Test> testCases = new()
-            {
-                new("apple", 0x12345678),
-                new(@"\xCD\x01\xEF\xD7\x30", 0x12345678),
-                new(@"- ()\ A longer test invoking various chars 298%#1 `", 0x12345678),
-                new(@"\x81\x51\xB7\x92\x09\x13\x63\xF9\xA6\xA8\xF1\x9B\xD5\x0E\xD1\x12\x84\xB0\x11\x6D\x37\x6C\x8E\xA6\x21\x2F\x6A\xF6\xBE\x65\xFA\xC4\x0F\x4D\x2A\x42\xEF\xA1\x52\xDB\xB0\x7F\x71\xEB\xD1\xAE\x2B\x74\xA0\x9F\xF3", 0x12345678)
-            };
-
-            foreach (var testCase in testCases)
-            {
-                Crypt(testCase.bytes, testCase.initialValue);
-                Console.WriteLine();
-            }
-        }
-
-        static byte[] Crypt(byte[] data, uint initialValue)
+        public byte[] Crypt(byte[] data, uint initialValue)
         {
             const uint feedbackValue = 0x87654321; //Given const from instructions.
             bool inputIsHex = IsHex(data);
@@ -35,13 +18,13 @@ namespace lfsr
             return resultBytes; //Returns the actual byte array, which is not the same as the visual output (PrintResult).
         }
 
-        static bool IsHex(byte[] data)
+        private static bool IsHex(byte[] data)
         {
             var dataString = Encoding.ASCII.GetString(data);
             return Regex.IsMatch(dataString, "^[x\\\\0-9A-Fa-f]+$"); //Regex pattern built w/ regex101.com. This checks if there are any characters besides those used in \x hex format.
         }
 
-        static byte[] CreateKey(uint feedbackValue, uint workingValue, int keyLength)
+        private static byte[] CreateKey(uint feedbackValue, uint workingValue, int keyLength)
         {
             var key = new byte[keyLength]; //Create a key the same length as the input data.
 
@@ -66,7 +49,7 @@ namespace lfsr
 
         // I used the following documentation as a guide for converting the data/key to BitArrays, then Xoring, because this seemed simplier than looping through the byte arrays.
         // https://learn.microsoft.com/en-us/dotnet/api/system.collections.bitarray.xor?view=net-7.0
-        static byte[] Xor(byte[] data, byte[] key)
+        private static byte[] Xor(byte[] data, byte[] key)
         {
             var dataBits = new BitArray(data);
             var keyBits = new BitArray(key);
@@ -79,7 +62,7 @@ namespace lfsr
             return resultBytes;
         }
 
-        static byte[] FormatAndPrintData(byte[] data, bool inputIsHex)
+        private static byte[] FormatAndPrintData(byte[] data, bool inputIsHex)
         {
             Console.Write("Input: " + Encoding.ASCII.GetString(data));
             if (inputIsHex) //The byte array currently includes many bytes witht the values 92 and 120 repeated due to \x format.
@@ -92,7 +75,7 @@ namespace lfsr
 
         // I used the following website for help reformating to \x hex format prior to printing as I had never done this before and wasn't aware of these libraries:
         // https://codelikeadev.com/blog/convert-string-to-hex-c-sharp
-        static void PrintResult(byte[] data, bool inputIsHex)
+        private static void PrintResult(byte[] data, bool inputIsHex)
         {
             Console.Write("\nOutput: ");
             if (inputIsHex) { Console.WriteLine(Encoding.ASCII.GetString(data)); } //If the input was hex, then the output bytes to be printed are ASCII chars.
