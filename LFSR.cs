@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lfsr
 {
-    public class LfsrProgram
+    public class LFSR
     {
         public byte[] Crypt(byte[] data, uint initialValue)
         {

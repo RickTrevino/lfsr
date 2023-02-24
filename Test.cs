@@ -24,8 +24,8 @@ namespace lfsr
 
             foreach (var testCase in testCases)
             {
-                LfsrProgram runner = new();
-                runner.Crypt(testCase.bytes, testCase.initialValue);
+                LFSR analyzer = new();
+                analyzer.Crypt(testCase.bytes, testCase.initialValue);
                 Console.WriteLine();
             }
         }
